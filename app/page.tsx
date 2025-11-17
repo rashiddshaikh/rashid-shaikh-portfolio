@@ -39,7 +39,7 @@ export default function Page() {
           elevated={false}
         >
           <div className=' relative mt-5 block w-full py-1  md:py-2 '>
-            <h2 className='mb-14 text-center text-sm font-medium text-white md:text-lg  '>
+            <h2 className='mb-20 text-center text-sm font-medium text-white md:text-lg  '>
               Technologies I have used
             </h2>
             <SkillsSwiper />
