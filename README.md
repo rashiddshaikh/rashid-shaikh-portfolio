@@ -1,93 +1,150 @@
-# Younes Megaache's personal website
+# Rashid Shaikh — Personal Portfolio
+<p align="center"> <img src="public/screenshot.png" width="750" /> </p> <p align="center"> <a href="https://rashid-shaikh.vercel.app/" target="_blank"> <img src="https://img.shields.io/badge/Live%20Site-Visit-blue?style=for-the-badge" /> </a> <img src="https://img.shields.io/badge/Next.js-13-black?style=for-the-badge&logo=next.js" /> <img src="https://img.shields.io/badge/TailwindCSS-3-06B6D4?style=for-the-badge&logo=tailwindcss" /> <img src="https://img.shields.io/badge/TypeScript-4-3178C6?style=for-the-badge&logo=typescript" /> </p>
 
-<p align="center">
-<img src="public/screenshot.png" height="400"  >
-</p>
+A clean and modern personal portfolio built with Next.js, React, and TailwindCSS.
+Fully responsive, fast, and deployed on Vercel.
 
-My personal website , designed loosely in Figma and coded in VS Code, built using Next.js and TailwindCSS, deployed to Vercel.
-Text is in the FiraCode typeface
+👉 Live Website: https://rashid-shaikh.vercel.app/
 
-👉 https://younes-megaache.com/
+## 📚 Table of Contents
 
-# Table of content
+- Getting Started
+- Analytics (Optional)
+- Deploying to Vercel
+- General Deployment Guide
+- Tech Stack
+- Todo
+- License
 
-- [Get started](#get-started)
-  - [Analytics (Optional)](#analytics-optional)
-- [deploy to vercel](#deploy-to-vercel)
-- [General deployment steps](#general-deployment-steps)
-- [Tech Stack](#tech-stack)
-- [Todo](#todo)
-- [License](#license)
+## 🛠️ Getting Started
 
-## Get started
+Clone the repository
+```bash 
+git clone https://github.com/rashiddshaikh/rashid-shaikh-portfolio
+```
 
-1. clone this repo: `git clone https://github.com/megaacheyounes/portfolio-tailwind`
-1. install node packages: `yarn` or `npm i`
-1. add your information, under folder `src/data` update all files with your data (e.g. personal information, projects, experiences..)
-1. replace resume (CV) in the folder `public`, must be PDF with name `resume.pdf` (if file extension or name is different, then update `RESUME_PATH` in `utils/env.ts`)
-1. run and test your portfolio: `yarn dev` or `npm run dev`
-1. make a build (to make sure there will be no compilation errors when you deploy): `yarn build` or `npm run build`
+Install dependencies
+```bash
+npm install
+or
+yarn
+```
 
-##### Analytics (Optional)
+Add your personal information Update all files inside: -
+```bash
+src/data/
 
-If you wish to add analytics, but do not want extensions or browsers to block it, then you can use [Ackee](https://github.com/electerious/Ackee) self hosted Analytics, its a free and open source Analytics tool that you can deploy easily and for free to [vercel](https://vercel.com/) or other Node.js hosting providers.
+```
+(your bio, experience, projects, social links, etc.)
 
-1. follow Ackee instructions to deploy your analytics platform, for deploying to Vercel see: [Ackee with vercel](https://github.com/electerious/Ackee/blob/master/docs/Get%20started.md#with-vercel)
-1. create a domain in your Ackee tool
-1. update `src/utils/env.ts` with your Ackee analytics base URL, Ackee script URL and domain ID
 
-**If you do <ins>NOT</ins> which to add Analytics, then set the flag `ENABLE_ANALYTICS` to false, in `src/tools/env.ts`**
+Add your resume Replace: -
+```bash
+public/resume.pdf
+```
 
-## deploy to vercel
+If using a different name, update RESUME_PATH inside: -
+```bash
+src/utils/env.ts
+```
 
-Vercel is a free and very convenient platform to publish Next.js projects (Next.js is developed by vercel)
+Start the development server
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-1. create a repo using your github account [github.com/new](https://github.com/new), then add repo link: `git remote add origin <your repo link>`
-1. publish the project to your repo: `git push origin master`
-1. import your repo in Vercel: [vercel.com/new](https://vercel.com/new)
+Build for production
+```bash
+npm run build
+# or
+yarn build
+```
 
-Vercel will automatically run the build script every time you merge into master branch, as well as generating previews when you push to dev branch
+## 📊 Analytics (Optional)
 
-## General deployment steps
+This project supports Ackee (self-hosted, privacy-friendly analytics).
 
-this project is static, therefor you can deploy it to any web hosting (e.g. Firebase hosting)
+To use analytics:
 
-1. update next.config.js: set value `output` to `export` (learn more: [vercel docs](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports))
-1. make a build: `yarn build`
-1. upload the static files under `/out` (e.i. html, css and js) to your web hosting provider (e.g. Firebase hosting)
+- Deploy Ackee
+- Create a domain inside Ackee
+- Update your URLs and domain ID in:
+```bash
+src/utils/env.ts
+```
+- To disable analytics:
+```bash
+Set ENABLE_ANALYTICS = false.
+```
 
-## Tech Stack
+## ▲ Deploying to Vercel
 
-- ⚡️ Next.js 13 with App Router
+Create a GitHub repository: https://github.com/new
+
+Add the GitHub remote:
+```bash
+- git remote add origin <your-repo-url>
+- git push -u origin main
+```
+
+Import your repo into Vercel: https://vercel.com/new
+
+Vercel will automatically build and deploy on each push.
+
+## 🌐 General Deployment Guide (Static Export)
+
+In next.config.js, set:
+```bash
+output: "export"
+```
+
+Build the static export:
+```bash 
+npm run build
+```
+
+Upload the /out folder to any static host:
+
+- Firebase Hosting
+- Netlify
+- GitHub Pages
+- Cloudflare Pages
+
+## 🧰 Tech Stack
+
+- ⚡ Next.js 13 (App Router)
 - ⚛️ React 18
 - ✨ TypeScript
-- 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the primary colors
-- 📈 Absolute Import and Path Alias — components imported using `@/` prefix
-- 📏 ESLint — to find and fix problems, also auto sort imports
-- 💖 Prettier — code formatting and consistency
-- 📈 Analytics - supports Ackee self hosted Analytics https://github.com/electerious/Ackee
+- 💨 Tailwind CSS 3
+- 📁 Path Aliases (@/)
+- 🧹 ESLint & Prettier
+- 📈 Ackee Analytics (optional)
 
-## Todo
+## 📝 Todo
 
-- [ ] update all npm packages
-- [ ] add documentation
-- [ ] add E2E tests
-- [ ] add contact form
-- [ ] improve animations
+- [ ] Improve animations  
+- [ ] Add contact form  
+- [ ] Add E2E tests  
+- [ ] Update dependencies  
+- [ ] Add more detailed documentation
 
-## License
+## 📄 License
+<p align="left"> <img src="https://img.shields.io/badge/License-Open%20License-blue?style=flat-square" /> <img src="https://img.shields.io/badge/Author-Rashid%20Shaikh-green?style=flat-square" /> <img src="https://img.shields.io/badge/Year-2025-lightgrey?style=flat-square" /> </p>
 
-```license
-               DO WHAT YOU WANT TO PUBLIC LICENSE
+```md
+                   RASHID SHAIKH — OPEN LICENSE
 
- Copyright (C) 2024 Younes Megaache
+Copyright © 2025
 
- Everyone is permitted to copy and distribute verbatim or modified
- copies of this license document, and changing it is allowed as long
- as the name is changed.
+Free to use.
+Free to modify.
+Free to share.
 
-                DO WHAT YOU WANT TO PUBLIC LICENSE
-   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+No attribution needed.
+No warranty provided.
 
-  1. You just DO WHAT YOU WANT TO.
+Build whatever you want — enjoy.
+
 ```
