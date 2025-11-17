@@ -39,13 +39,14 @@ export default function Page() {
 >
   <div className="relative mt-5 block w-full py-1 md:py-2">
 
-    <h2 className="text-center text-sm font-medium text-white md:text-lg">
-      Technologies I have used
-    </h2>
+<h2 className="text-center text-sm font-medium text-white md:text-lg">
+  Technologies I have used
+</h2>
 
-    <div className="mt-20">
-      <SkillsSwiper />
-    </div>
+<div className="mt-20">
+  <SkillsSwiper />
+</div>
+
 
   </div>
 </Section>
