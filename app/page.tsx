@@ -33,24 +33,18 @@ export default function Page() {
       </RevealWrapper>
 
       <Suspense fallback={<></>}>
-   <Section
-  className="mt-5"
-  contentClassName="px-0 mx-0 md:px-0 md:mx-0"
->
-  <div className="relative mt-5 block w-full py-1 md:py-2">
-
-<h2 className="text-center text-sm font-medium text-white md:text-lg">
-  Technologies I have used
-</h2>
-
-<div className="mt-20">
-  <SkillsSwiper />
-</div>
-
-
-  </div>
-</Section>
-
+        <Section
+          className=' mt-5'
+          contentClassName=' px-0 mx-0 md:px-0 mx-0 md:mx-0'
+          elevated={false}
+        >
+          <div className=' relative mt-5 block w-full py-1  md:py-2 '>
+            <h2 className='mb-10 text-center text-sm   font-medium text-white   md:text-lg '>
+              Technologies I have used
+            </h2>
+            <SkillsSwiper />
+          </div>
+        </Section>
       </Suspense>
 
       <ExperienceCard />
